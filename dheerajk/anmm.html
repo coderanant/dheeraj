@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>2.1</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="firstt21">
+        <p><center>Form 1: First Brief Investigation Report for Neonatal & Child Death
+        <p>
+                <center>* marked fields are mandatory</center>
+            </p>
+        </center>
+    </div><br>
+    <table class="fourth" align="center" padding="10px" cellpadding="10">
+                <tr>
+                    <td>Application Number* : </td>
+                    <td><input type="number" name="applicationNumber"  placeholder="5127XXXXXX89" required> </td>
+                </tr>
+    </table>
+        <table class="third" align="center" padding="10px" cellpadding="10">
+        <tr><td><center>A.  Background Information</center></td></tr></table>
+        <form action="anmform" method="POST">
+        <table align="center" padding="10px" cellpadding="10">
+	   <tr>
+		<td width="7%">1)</td><td width="55%"> Name Of The Child*:</td> 
+		<td><input type="text" pattern="[a-zA-Z\s]+"
+    oninvalid="setCustomValidity('Plz enter only Alphabets and Spaces only')"
+    onchange="try{setCustomValidity('')}catch(e){}" placeholder="Child Name" name="nameOfTheChild" required></input></td></tr>
+        
+		<tr><td>2)</td><td>  Age*:</td>
+     
+        <td><select name="year" required>
+        <option value="">--Year--</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        </select>
+     
+        <select name="month" required>
+        <option value="">--Month--</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        </select>
+        
+        <select name="days" required>
+        <option value="">--Days--</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+        <option value="17">17</option>
+        <option value="18">18</option>
+        <option value="19">19</option>
+        <option value="20">20</option>
+        <option value="21">21</option>
+        <option value="22">22</option>
+        <option value="23">23</option>
+        <option value="24">24</option>
+        <option value="25">25</option>
+        <option value="26">26</option>
+        <option value="27">27</option>
+        <option value="28">28</option>
+        <option value="29">29</option>
+        <option value="30">30</option>
+        </select>
+		</td></tr>
+        <tr>
+        	<td>3)</td><td>  Gender:</td>
+        	<td>
+        		<select name="gender">
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+            </td></tr>
+
+             <tr><td>4)</td><td>  Address*:</td>
+               <td> <select id="input" name="district" onchange="random_function()" required>
+                    <option value="">--District--</option>
+                    <option value="BILASPUR">BILASPUR</option>
+                    <option value="CHAMBA">CHAMBA</option>
+                    <option value="HAMIRPUR">HAMIRPUR</option>
+                    <option value="KANGRA">KANGRA</option>
+                    <option value="KINNAUR">KINNAUR</option>
+                    <option value="KULLU">KULLU</option>
+                    <option value="LAHAUL AND SPITI">LAHAUL AND SPITI</option>
+                    <option value="MANDI">MANDI</option>
+                    <option value="SHIMLA">SHIMLA</option>
+                    <option value="SIRMAUR">SIRMAUR</option>
+                    <option value="SOLAN">SOLAN</option>
+                    <option value="UNA">UNA</option>
+                </select>
+            
+           <select id="output" required>
+               <option>Block</option>
+</select> <br><br>
+                <input type="text" name="address" placeholder="Area and Street" required><p></p>
+                <input pattern="[0-9]{6}" oninvalid="setCustomValidity('Enter 6 digits only')" onchange="try{setCustomValidity('')}catch(e){}" type="text"  name="pincode"  placeholder="Pincode" required>
+              
+           
+        </td></tr>
+            <tr>
+        	<td>5)</td><td>  Order of Birth:</td>
+        	<td>
+                <select name="orderOfBirth">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="More">More</option>
+    </td></tr></select>
+            <tr><td>6)</td><td>  Caste:</td>
+            	<td>
+            		<select name="caste">
+        <option value="ST">ST</option>
+        <option value="SC">SC</option>
+        <option value="OBC">OBC</option>
+        <option value="General">General</option></select>
+                </td></tr>
+                <tr><td>7)</td><td>  Does Family Have a Below Poverty Line(BPL) card?</td>
+                <td>
+                    <select name="belowPovertyLineCard">
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option></select>
+                </td></tr>
+            </table>
+                <table align="center" padding="10px" cellpadding="10">
+                <tr>
+                <td width="7%">8)</td><td>  Immunization Status:</td></tr></table>
+                <table align="center" padding="10px" cellpadding="10">
+
+                <tr><td width="7%"></td><td width="55%">BCG</td><td width="39.5%"><input type="checkbox" class="largerCheckbox"  class="largerCheckbox" name="bcg" value="BCG"></td></tr>
+                    <tr><td></td><td>Penta 1</td><td><input type="checkbox" class="largerCheckbox"  class="largerCheckbox" name="immunization" value="Penta 1"></td></tr>
+                    <tr><td></td><td>Penta 2</td><td><input type="checkbox" class="largerCheckbox" class="largerCheckbox" name="immunization" value="Penta 2"> </td></tr>    
+                    <tr><td></td><td>Penta 3</td><td><input type="checkbox" class="largerCheckbox" class="largerCheckbox" name="immunization" value="Penta 3"></td></tr> 
+                    <tr><td></td><td>MR 1</td><td><input type="checkbox" class="largerCheckbox" class="largerCheckbox" name="immunization" value="MR 1"></td></tr>      
+                    <tr><td></td><td>MR Booster</td><td><input type="checkbox" class="largerCheckbox" class="largerCheckbox" name="immunization" value="Mr Booster"></td></tr>
+                
+            </table>
+                <table align="center" padding="10px" cellpadding="10">
+            <tr>
+            	<td width="7%">9)</td><td width="55%">  Weight (if recorded in the MCP card):</td>
+            	<td><input type="text" pattern="[0-9]{1,2}" oninvalid="setCustomValidity('Enter age less than 100')" onchange="try{setCustomValidity('')}catch(e){}" name="weight" placeholder="Weight" ></td>
+            </tr>
+           <tr>
+                <td>10) </td><td> Growth Curve (fill for child less than 3 years; check MCP card) : </td>
+                <td>
+                    <input type="radio" class="largerCheckbox"  class="largerCheckbox" name="growthCurve" value="Green Zone">Green Zone  
+                    <input type="radio" class="largerCheckbox" class="largerCheckbox" name="growthCurve" value="Yellow Zone">Yellow Zone <p></p> 
+                    <input type="radio" class="largerCheckbox" class="largerCheckbox" name="growthCurve" value="Orange Zone">Orange Zone  
+                    <input type="radio" class="largerCheckbox"  class="largerCheckbox" name="growthCurve" value="none">None  &nbsp&nbsp
+                </td></tr>
+                <tr><td>11)</td><td>  Any Past Illness?</td>
+                	<td>
+                		<div id="i">
+                       <select id=any name="pastIllness">
+                    <option value="No">No</option>
+                    <option value="Yes">Yes</option>
+                       </div></td></tr>
+                     <tr>
+                        <td>12)</td><td>  If yes, nature of illness :</td>
+                         <td><textarea disabled="disabled" id=past name="avertDeath" rows="2" cols="30" placeholder="Type to text" required></textarea></td>
+                        </tr>
+                   </table>
+
+                       <table class="third" align="center" padding="10px" cellpadding="10">
+                        <tr><td><center>B. Symptoms during illness</center></td></tr></table> 
+                        <table align="center" padding="25px" cellpadding="10">
+                        <tr>
+                            <th width="60.5%">Symptoms during illness</th>
+                            <th>Duration of Symptoms</th>
+                        </tr>
+                        <tr>
+                            <td>Inability To Feed*</td>
+                            <td><input type="number" placeholder="No. Of Days" name="inabilityToFeed" required></td>
+                        </tr>
+                        <tr>
+                            <td>Fever*</td>
+                            <td><input type="number" placeholder="No. Of Days" name=fever required></td>
+                        </tr>
+                        <tr>
+                            <td>Loose Stools*</td>
+                            <td><input type="number" placeholder="No. Of Days" name="looseStools" required></td>
+                        </tr>
+                        <tr>
+                            <td>Vomiting*</td>
+                            <td><input type="number" placeholder="No. Of Days" name="vomiting" required></td>
+                        </tr>
+                        <tr>
+                            <td>Fast breathing*</td>
+                            <td><input type="number" placeholder="No. Of Days" name="fastBreathing" required></td>
+                        </tr>
+                        <tr>
+                            <td>Convulsions*</td>
+                            <td><input type="number" placeholder="No. Of Days" name="convulsions" required></td>
+                        </tr>
+                        <tr>
+                            <td>Appearance of Skin rashes*</td>
+                            <td><input type="number" placeholder="No. Of Days" name="skinRashes" required></td>
+                        </tr>
+                        <tr>
+                            <td>Injury (like fractures, wounds)*</td>
+                            <td><input type="number" placeholder="No. Of Days" name="injury" required></td>
+                        </tr>
+                        <tr>
+                            <td>Any other symptoms</td>
+                            <td><textarea rows="2" columns="2" placeholder="Other symptoms" name="otherSymptoms"></textarea></td>
+                        </tr></table>   
+
+
+<table class="third" align="center" padding="10px" cellpadding="10">
+    <tr><td><center>C. Details of treatment:</center></td></tr></table>
+    <table align="center" padding="25px" cellpadding="10">
+        <tr><td width="7%">1)</td>
+            <td width="55%">Whether treatment for illness was taken or not?</td>
+                <td>
+                    <select id="A" name="treatmentTaken">
+                    <option value="No">No</option>
+                    <option value="Yes">Yes</option>
+                   
+            </td></tr>
+            <tr><td>2)</td><th>If yes, where was the child treated:</th></tr>
+            <tr><td></td>
+                <td>Public Health Facility:</td>
+                <td>
+                    <input disabled=disabled id="B" type="checkbox" class="largerCheckbox" name="whereWasTheChildTreated" value="PHC">PHC<br>
+                    <input disabled=disabled id="C" type="checkbox" class="largerCheckbox" name="whereWasTheChildTreated" value="CHC">CHC<br>
+                    <input disabled=disabled id="D" type="checkbox" class="largerCheckbox" name="whereWasTheChildTreated" value="DH">DH<br>
+                    <input disabled=disabled id="E" type="checkbox" class="largerCheckbox" name="whereWasTheChildTreated" value="SDH/Taluqa Hospital">SDH/Taluq Hospital<br>
+                </td>
+            </tr>
+            <tr><td></td><td>Private Hospital/ Nursing Home</td>
+                <td><input disabled=disabled id="F" type="checkbox" class="largerCheckbox" name="whereWasTheChildTreated" value="Private Hospital/ Nursing Home" ></td>
+            </tr>
+            <tr><td></td>
+                <td>Qualified allopathic private practitioner</td>
+                <td> <input disabled=disabled id="G" type="checkbox" class="largerCheckbox" name="whereWasTheChildTreated" value="Qualified allopathic private practitioner"></td>
+            </tr>
+            <tr><td></td>
+                <td>AYUSH practitioner</td>
+                <td><input disabled=disabled id="H" type="checkbox" class="largerCheckbox" name="whereWasTheChildTreated" value="AYUSH practitioner"></td>
+            </tr>
+            <tr><td></td>
+                <td>Unqualified provider (quack, informal provider)</td>
+                <td><input disabled=disabled id="I" type="checkbox" class="largerCheckbox" name="whereWasTheChildTreated" value="Unqualified provider (quack, informal provider) " ></td>
+            </tr>
+            <tr><td></td>
+                <td>Traditional healer </td>
+                <td><input disabled=disabled id="J" type="checkbox" class="largerCheckbox" name="whereWasTheChildTreated" value="Traditional heale" ></td>
+            </tr>
+    </table>
+
+
+<table class="third" align="center" padding="10px" cellpadding="10">
+    <tr><td><center>D. Probable cause of death</center></td></tr></table>
+    <table align="center" padding="25px" cellpadding="10">
+        <tr><td width="7%">1)</td>
+            <td width="55%">Any Identifiable Cause:</td>
+            <td><select id="1" name="probable">
+                    <option value="No">No</option>
+                    <option value="Yes">Yes</option>
+                    </td>
+        </tr>
+        <tr><td>2)</td>
+            <td>Diarhoea:</td>
+            <td><input disabled=disabled id="2" type="checkbox" class="largerCheckbox" name="probableCauseOfDeath" value="Diarhoea"></td>
+        </tr>
+        <tr><td>3)</td>
+            <td>Pneumonia:</td>
+            <td><input disabled=disabled id="3" type="checkbox" class="largerCheckbox" name="probableCauseOfDeath" value="Pneumonia"></td>
+        </tr>
+        <tr><td>4)</td>
+            <td>Malaria:</td>
+            <td><input disabled=disabled id="4" type="checkbox" class="largerCheckbox" name="probableCauseOfDeath" value="Malaria"></td>
+        </tr>
+        <tr><td>5)</td>
+            <td>Measles:</td>
+            <td><input disabled=disabled id="5" type="checkbox" class="largerCheckbox" name="probableCauseOfDeath" value="Measles"></td>
+        </tr>
+        <tr><td>6)</td>
+            <td>Septicemia (Infection):</td>
+            <td><input disabled=disabled id="6" type="checkbox" class="largerCheckbox" name="probableCauseOfDeath" value="Septicemia"></td>
+        </tr>
+        <tr><td>7)</td>
+            <td>Meningitis:</td>
+            <td><input disabled=disabled id="7" type="checkbox" class="largerCheckbox" name="probableCauseOfDeath" value="Meningitis"></td>
+        </tr>
+        <tr><td>8)</td>
+            <td>Injury:</td>
+            <td><input disabled=disabled id="8" type="checkbox" class="largerCheckbox" name="probableCauseOfDeath" value="Injury"></td>
+        </tr>
+        <tr><td>9)</td>
+            <td>Any Other Cause</td>
+            <td><textarea disabled=disabled id="9" name="probableCauseOfDeath" placeholder="Type" ></textarea></td>
+        </tr>
+    </table>
+
+<table class="third" align="center" padding="10px" cellpadding="10">
+    <tr><td><center>E. According to the respondent (parent, close family member), what was the cause of death?*</center></td></tr></table>
+    <table align="center" padding="25px" cellpadding="20">
+        <tr>
+            <td><textarea  rows="3" cols="80" placeholder="Type to text" name="causeOfDeath" required></textarea></td>
+        </tr>
+    </table>
+
+    <table class="third" align="center" padding="10px" cellpadding="10">
+    <tr><td><center>F. At which level do you think the delay occurred?</center></td></tr></table>
+    <table align="center" padding="25px" cellpadding="20">
+        <tr>
+            <td width="7%">1.</td><td width="80%"><b>Delay at home</b> (eg; seriousness of illness not recognized, treatment not sought, treatment sought at a late stage, family members did not allow treatment seeking)</td>
+            <td><input type="checkbox" class="largerCheckbox" name="delayOccurred" value="home"></td>
+        </tr>
+        <tr>
+            <td>2.</td><td><b>Delay in transportation</b> (eg; transport facility not available, could not afford local transport, difficult /hilly terrain, long distance to the health facility)</td>
+            <td><input type="checkbox" class="largerCheckbox" name="delayOccurred" value="transportation"></td>
+        </tr>
+        <tr>
+            <td>3.</td><td><b>Delay at facility level </b>  (eg; doctor/staff not available, drugs & equipment not available, delay in initiation of treatment)</td>
+            <td><input type="checkbox" class="largerCheckbox" name="delayOccurred" value="facility"></td>
+        </tr>
+    </table>
+
+    <table class="third" align="center" padding="10px" cellpadding="10">
+    <tr><td><center>G. Observations</center></td></tr></table>
+    <table align="center" padding="25px" cellpadding="20">
+        <tr>
+            <td width="50%">Based on your analysis of the situation in which the death took place, what according to you could have been done to avert this death?</td>
+            <td><textarea name="avertDeath" rows="2" cols="30" placeholder="Type to text"></textarea></td>
+        </tr>
+    </table><br>
+    <table class="declaration" align="center" padding="25px" cellpadding="20">
+        <tr>
+            <td><center>Declaration</center></td></tr><tr>
+            <td><input type="checkbox" class="largerCheckbox" name="declaration" required> I hereby declare that the details furnished above are true and correct to the best of my knowledge. In  case  any  of  the  above information is found to be false or untrue or misleading or misrepresenting, I am aware that I may be held liable for  it.</td>
+        </tr></table>
+    </div>
+            <table class="submit" align="center" padding="25px" cellpadding="20"><br>
+        <tr><td><center><input type="submit" class="submit" value="Submit"></center></td></tr>
+    </form>
+
+    </form>
+
+<script src="2a.js">
+</script>
+<script src="2aa.js">
+</script>
+
+ <script>
+            function random_function()
+            {
+                var a=document.getElementById("input").value;
+                if (a==""){
+                    var arr=["Block"]
+                }
+                else if(a==="BILASPUR")
+                {
+                    var arr=["SADAR","GHUMARWIN","JHANDUTTA"];
+                }
+                else if(a==="CHAMBA")
+                {
+                    var arr=["TISSA","CHAMBA","MEHLA","BHATTIYAT","SALOONI","BHARMOUR","PANGI"];
+                }
+                else if(a==="HAMIRPUR")
+                {
+                    var arr=["BAMSON","BHORANJ","BIJHARI","HAMIRPUR","NADAUN","SUJNAPUR"];
+                }
+                else if(a==="KANGRA")
+                {
+                    var arr=["RAIT","PANCHRUKHI","DEHRA","FATEHPUR","INDORA","NAGROTA BAGWAN","NURPUR","NAGROTA SURIAN","BAIJNATH","BHAWARNA","KANGRA","LAMBAGAON","SULLAH","PRAGPUR","DHARAMSHALA"];
+                }
+                else if(a==="KINNAUR")
+                {
+                    var arr=["NICHAR","POOH","KALPA"];
+                }
+                else if(a==="KULLU")
+                {
+                    var arr=["ANNI","NAGGAR","NIRMAND"];
+                }
+                else if(a==="LAHAUL AND SPITI")
+                {
+                    var arr=["LAHAUL","SPITI"];
+                }
+                else if(a==="MANDI")
+                {
+                    var arr=["BALH","CHAUNTRA","DHARAMPUR","DRANG","GOHAR","GOPALPUR","KARSOG","SADAR MANDI","SERAJ","SUNDERNAGAR"];
+                }
+                else if(a==="SHIMLA")
+                {
+                    var arr=["NARKANDA","THEOG","BASANTPUR","NANKHARI","CHHOHARA","MASHOBRA","CHOPAL","JUBBAL & KOTHKAI","ROHRU","RAMPUR"];
+                }
+                else if(a==="SIRMOUR")
+                {
+                    var arr=["NAHAN","PAONTA","PACHHAD","RAJGARH","SANGRAH","SHILLAI"];
+                }
+                else if(a==="SOLAN")
+                {
+                    var arr=["DHARAMPUR","KANDAGHAT","KUNIHAR","NALAGARH","SOLAN"];
+                }
+                else if(a==="UNA")
+                {
+                    var arr=["AMB","BANGANA","GAGRET","HAROLI","UNA"];
+                }
+                var string="";
+               
+                for(i=0;i<arr.length;i++)
+                {
+                    string=string+"<option value="+arr[i]+">"+arr[i]+"</option>";
+                }
+                string="<select name='any_name'>"+string+"</select>";
+                document.getElementById("output").innerHTML=string;
+            }
+        </script>
+
+</body>
+
+</html>
