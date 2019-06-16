@@ -15,7 +15,7 @@
  <table class="fourth" align="center" padding="10px" cellpadding="10">
                 <tr>
                     <td>Application Number* : </td>
-                    <td><input type="number" name="applicationNumber"  placeholder="5127XXXXXX89" required> </td>
+                    <td><input type="number" name="applicationNumber"  placeholder="5127XXXXXX89" required pattern="[0-9]{12}" title="Please enter a valid application number"> </td>
                 </tr>
     </table>
 
@@ -43,23 +43,23 @@
 </select></td>
             </tr><tr>
                 <td>Village*:<br>
-                <input type="text" name="village" placeholder="Village" required></td>
+                <input type="text" name="village" placeholder="Village" required pattern="[A-Za-z]+[A-Za-z ]+" title="Only alplhabets allowed"></td>
                 <td>PHC Name*:<br>
-                <input type="text" name="phc"  placeholder="PHC-Name" required></td>
+                <input type="text" name="phc"  placeholder="PHC-Name" required pattern="[A-Za-z]+[A-Za-z ]+" title="Only alplhabets allowed"></td>
             </tr><td>Sub-Center*:<br>
-                <input type="text" name="subCenter"  placeholder="Sub-Center" required></td>
+                <input type="text" name="subCenter"  placeholder="Sub-Center" required pattern="[A-Za-z]+[A-Za-z ]+" title="Only alplhabets allowed"></td>
                 <td>RHC Number of Mother/Baby*:<br>
-                <input type="number" name="rhcNumberOfMother" placeholder="RHC Number of Mother/Baby" required></td>
+                <input type="number" name="rhcNumberOfMother" placeholder="RHC Number of Mother/Baby" required pattern="[0-9]+" title="Only numeric digits allowed"></td>
                 </tr><tr>
                 <td>Year*:<br>
-                <input type="number" name="year" placeholder="Year" required></td>
+                <input type="number" name="year" placeholder="Year" required pattern="[0-9]{4}" title="Please enter a valid year"></td>
                 <td>Name of Head of Household*:<br>
-                <input type="text" name="household" placeholder="Head Household" required></td>
+                <input type="text" name="household" placeholder="Head Household" required pattern="[A-Za-z]+[A-Za-z ]+" title="Only alplhabets allowed"></td>
                 </tr><tr>
                 <td>Full Name of Deceased*:<br>
-                <input type="text" name="deceasedName" placeholder="Deceased-name" required></td>
+                <input type="text" name="deceasedName" placeholder="Deceased-name" required pattern="[A-Za-z]+[A-Za-z ]+" title="Only alplhabets allowed"></td>
                 <td>Full name of mother of deceased*:<br>
-                <input type="text" name="motherNameDeceased" placeholder="Head Household" required></td></tr></table>
+                <input type="text" name="motherNameDeceased" placeholder="Head Household" required pattern="[A-Za-z]+[A-Za-z ]+" title="Only alplhabets allowed"></td></tr></table>
                 <table align="center" padding="10px" cellpadding="10">
                 <tr>
                     <td width="35%">1st HYS*:</td>
