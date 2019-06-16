@@ -75,7 +75,7 @@
         <table align="center" padding="10px" cellpadding="10">
         <tr>
             <td width="7%">1)</td><td> Name of Respondent*:</td>
-            <td><input type="text" placeholder="Respondent Name" name="respondentName" required></td></tr>
+            <td><input type="text" placeholder="Respondent Name" name="respondentName" required pattern="[A-Za-z]+[A-Za-z ]+" title="Only alplhabets allowed"></td></tr>
 
             <tr>
             <td>2)</td><td> Relationship of respondent with deceased*:</td>
@@ -171,7 +171,7 @@
                         <tr>    
                             <td>11(B)</td><td> Pin Code*:</td>
 
-                            <td><input type="text" name="pincode" placeholder="Pincode" required></td>
+                            <td><input type="text" name="pincode" placeholder="Pincode" required pattern="[0-9]{6}" title="Only numeric digits allowed"></td>
                         </tr>
 
                         <tr>
@@ -192,7 +192,7 @@
 
                             <tr>
                                 <td>12(B)</td><td> What did the respondent think the newborn died of?*<br>(Allow the respondent to tell the illness in his or her own words)</td>
-                                <td><textarea rows="2" columns="2" placeholder="Type" name="respondentThink" required></textarea></td>
+                                <td><textarea rows="2" columns="2" placeholder="Type" name="respondentThink" required pattern="[a-zA-Z0-9]+.+" title="Can't start with a space"></textarea></td>
                                 <td></td>
                             </tr></table>
 
